@@ -1,0 +1,71 @@
+package app.popupy;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import app.modele.Zadanie;
+
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+
+public class PoupZadanie extends JDialog {
+
+	private static final long serialVersionUID = 1L;
+	private final JPanel contentPanel = new JPanel();
+	
+
+	public PoupZadanie() {
+		ustaw(new Zadanie());
+	}
+	
+	public PoupZadanie(Zadanie zadanie) {
+		ustaw(zadanie);
+	}
+	
+	private void ustaw(Zadanie zadanie) {
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(new BorderLayout(0, 0));
+		{
+			JLabel lZadanie = new JLabel("Zadanie");
+			lZadanie.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			lZadanie.setHorizontalAlignment(SwingConstants.CENTER);
+			contentPanel.add(lZadanie, BorderLayout.NORTH);
+		}
+		{
+			JLabel eTresc = new JLabel("<html><center>" + zadanie.getTresc() + "</center></html>");
+			eTresc.setHorizontalAlignment(SwingConstants.CENTER);
+			contentPanel.add(eTresc, BorderLayout.CENTER);
+		}
+		{
+			JPanel buttonPane = new JPanel();
+			buttonPane.setLayout(new FlowLayout(FlowLayout.CENTER));
+			getContentPane().add(buttonPane, BorderLayout.SOUTH);
+			{
+				JButton pUsun = new JButton("Usun");
+				pUsun.setActionCommand("OK");
+				buttonPane.add(pUsun);
+				getRootPane().setDefaultButton(pUsun);
+			}
+			{
+				JButton pZamknij = new JButton("Zamknij");
+				pZamknij.setActionCommand("Cancel");
+				buttonPane.add(pZamknij);
+			}
+		}
+		
+		setModal(true);
+		
+		setLocationRelativeTo(null);
+		setVisible(true);
+	}
+
+}

@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+D:\02_Java\99_Workspace\03-GitGH2024\001-ToDo\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3880422782.index
+20838438.index

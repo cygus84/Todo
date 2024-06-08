@@ -1,0 +1,19 @@
+package app.menagery;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
+
+import app.modele.Zadanie;
+
+@SuppressWarnings("serial")
+public class MenagerZadan extends DefaultListModel<Zadanie> {
+	
+	private JList<Zadanie> lista;
+
+	public MenagerZadan(JList<Zadanie> lista) {
+		super();
+		// dodanie renderera
+		lista.setModel(this);
+		this.lista = lista;
+	}
+}

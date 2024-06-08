@@ -1,0 +1,7 @@
+package app.renderery;
+
+import javax.swing.JLabel;
+
+public class RendererZadanie01 extends JLabel {
+
+}

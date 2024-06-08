@@ -1,0 +1,9 @@
+package app.menagery;
+
+import javax.swing.DefaultListModel;
+
+import app.modele.Zadanie;
+
+public class MenagerZadan extends DefaultListModel<Zadanie> {
+
+}

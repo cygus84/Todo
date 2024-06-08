@@ -1,0 +1,12 @@
+package app.renderery;
+
+import javax.swing.JLabel;
+
+@SuppressWarnings("serial")
+public class RendererZadanie01 extends JLabel {
+	
+	public RendererZadanie01() {
+		super();
+	}
+
+}

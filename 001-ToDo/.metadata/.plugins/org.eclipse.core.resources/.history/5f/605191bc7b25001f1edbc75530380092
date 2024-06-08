@@ -1,0 +1,18 @@
+package app.renderery;
+
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.Color;
+
+@SuppressWarnings("serial")
+public class RendererZadanie01 extends JLabel {
+	
+	public RendererZadanie01() {
+		super();
+		setBackground(new Color(255, 128, 64));
+		setForeground(new Color(0, 0, 0));
+		setFont(new Font("Tahoma", Font.PLAIN, 14));
+		setText("Zadanie001");
+	}
+
+}
